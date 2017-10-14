@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").each(function () {
+                       $(this).click(function(){
+                           var id = $(this).attr("id").replace('a', '');
+                           $("#img" + id).attr({width:"50",height:"80"});
+                       })
+                    }
+            )
+        });
+    </script>
+</head>
+<body>
+<img src="/i/eg_smile.gif" id="img1"/>
+<br />
+<button id="a1">设置图像的 width 和 height 属性</button>
+<img src="/i/eg_smile.gif" id="img2"/>
+<br />
+<button id="a2">设置图像的 width 和 height 属性</button>
+<img src="/i/eg_smile.gif" id="img3"/>
+<br />
+<button id="a3">设置图像的 width 和 height 属性</button>
+<img src="/i/eg_smile.gif" id="img4"/>
+<br />
+<button id="a4">设置图像的 width 和 height 属性</button>
+</body>
+</html> 

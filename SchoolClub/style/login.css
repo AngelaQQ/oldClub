@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+body {
+	font: 14px Arial;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	background-color:#fce075;
+	background-image:url("../p/loginpic/login.jpg");
+}
+.container { 
+     margin: 25px auto; 
+	 position: relative;  
+	 height:650px;
+}
+#content {
+	background: #f9f9f9;
+	box-shadow: 0 1px 0 #fff inset;
+	border: 1px solid #c4c6ca;
+	margin: 100px auto;
+	padding: 20px 0 0;
+	position:relative;
+	text-align: center;
+	text-shadow: 0 1px 0 #fff;
+	width: 400px;
+	height:500px;
+	
+}
+#content h1 {
+	color: #7E7E7E;
+	font: bold 25px "幼圆";
+	line-height: 20px;
+	margin: 10px 0 30px;
+}
+#content h1:before,
+#content h1:after {
+	content: "";
+	height: 1px;
+	position: absolute;
+	top: 10px;
+	width: 27%; 
+}    /* 账户登录前后横线 */
+#content h1:after {
+	background: rgb(126,126,126);
+	background: -moz-linear-gradient(left,  rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%); /*firefox*/
+	background: -webkit-linear-gradient(left, rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);/*safari chrome*/
+	background: -o-linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);/*opera*/
+	background: -ms-linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);/*IE*/
+	background: linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);/*标准语法*/
+    right: 0;
+}
+#content h1:before {
+	background: rgb(126,126,126);
+	background: -moz-linear-gradient(right,  rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
+    left: 0;
+}
+#content:after,
+#content:before {
+	background:#F9F9F9;
+	border: 1px solid #c4c6ca;
+	display: block;
+	content:"";
+	height: 100%;
+	left:-1px;
+	position: absolute;
+	width: 100%;
+}
+#content:after {
+	-webkit-transform: rotate(2deg); /* Safari Chrome*/
+	-moz-transform: rotate(2deg); /* Firefox */
+	-ms-transform: rotate(2deg);/* IE */
+	-o-transform: rotate(2deg);/* Opera */
+	transform: rotate(2deg); /* 标准语法 */
+	top: 0;
+	z-index:-2;
+}
+#content:before {
+	-webkit-transform: rotate(-3deg); /* Safari Chrome*/
+	-moz-transform: rotate(-3deg); /* Firefox */
+	-ms-transform: rotate(-3deg); /* IE */
+	-o-transform: rotate(-3deg); /* Opera */
+	transform: rotate(-3deg); /* 标准语法 */
+	top: 0;
+	z-index:-1;
+}
+#content form { 
+    margin: 0 20px; 
+	position: relative 
+}
+#content form input[type="text"],
+#content form input[type="password"] {
+	-webkit-border-radius: 3px; /* 圆角框 */
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: all 0.5s ease; /* 过渡 */
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	border: 1px solid #c8c8c8;
+	color: #777;
+	font: 13px Helvetica, Arial, sans-serif;
+	padding: 15px 10px 15px 40px;
+	width: 80%;
+}
+#content form input[type="text"]{
+	background:#eae7e7 url(../p/loginpic/user.png) no-repeat;
+	margin-top:10px;
+}
+#content form input[type="password"] {
+	background:#eae7e7 url(../p/loginpic/pw.png) no-repeat;
+	background-position:left;
+	margin-top:10px;
+}
+#content form input[type="text"]:focus,
+#content form input[type="password"]:focus {
+	background-color: #fff;
+	border: 1px solid #ed1c24;
+	outline: none;
+}
+#content form input[type="submit"] {
+	background: rgb(254,231,154);
+	background: -moz-linear-gradient(top,  rgba(254,231,154,1) 0%, rgba(254,193,81,1) 100%);/* 线性过渡 */
+	background: -webkit-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+	background: -o-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+	background: linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+	-webkit-border-radius: 30px; /*圆角框*/
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+	border-radius: 30px;
+	border: 1px solid #D69E31;
+	color: #85592e;
+	cursor: pointer; /*光标*/
+	font: bold 15px Helvetica, Arial, sans-serif;
+	height: 35px;
+	margin: 30px 0 35px 0;
+	position: relative;
+	width: 120px;
+}
+#content form input[type="submit"]:hover {
+	background: rgb(254,193,81);
+	background: -moz-linear-gradient(top,  rgba(254,193,81,1) 0%, rgba(254,231,154,1) 100%);
+	background: -webkit-linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
+	background: -o-linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
+	background: linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
+}
+#forgetPW,#register{
+	font-family:"微软雅黑";
+	font-size:16px;
+	padding:5px 0;
+	position:relative;
+	top:-10px;
+}
+#forgetPW span,#register span{
+	padding-right:5px;
+}
+#forgetPW a,#register a{
+	color:#F60;
+	text-decoration:none;
+}
+#thirdLogin{
+	margin:25px 0;
+	position:relative;
+}
+#thirdLogin h1{
+	margin-bottom:15px;
+}
+#thirdLogin ul{
+	position:relative;
+	list-style:none;
+	left:60px;
+
+}
+#thirdLogin ul li{
+	display:block;
+	float:left;
+	padding-right:10px;
+}
+#thirdLogin #weixin{
+	padding-left:8px;
+}
+#thirdLogin #qq a:hover{
+	-webkit-filter: drop-shadow(3px 3px 10px #3CF); /* Chrome, Safari, Opera */
+    filter: drop-shadow(3px 3px 10px #3CF);
+}
+#thirdLogin #weixin a:hover{
+	-webkit-filter: drop-shadow(3px 3px 10px #0C0); /* Chrome, Safari, Opera */
+    filter: drop-shadow(3px 3px 10px #0C0);
+}
+#thirdLogin #weibo a:hover{
+	-webkit-filter: drop-shadow(3px 3px 10px #F33); /* Chrome, Safari, Opera */
+    filter: drop-shadow(3px 3px 10px #F33);
+}
+#zhizuoren{
+	height:100px;
+	position:relative;
+	background-color:#eeeeee;
+}
+#zhizuoren span{
+	font-size:20px;
+	font-family:"微软雅黑";
+	position:absolute;
+	line-height:100px;
+	left:650px;
+}
+	

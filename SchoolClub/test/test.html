@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").each(function(){
+                $(this).click(function(){
+                    var idd = $(this).attr("id").replace('click', '');
+                    var text=$("#t"+idd);
+                    var val=text.html();
+                    text.html(function(){
+                        $(this).append()
+                    })
+                    $("#n").blur(function(){
+                        var value=$("#n").val();
+                        text.html(value);
+                    })
+                })
+            })
+        })
+    </script>
+    <style>
+        input:focus{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+<button id="click1">改变内容</button>
+<div id="t1">要改变的内容</div>
+<button id="click2">改变内容</button>
+<div id="t2">要改变的内容</div>
+</body>
+</html>

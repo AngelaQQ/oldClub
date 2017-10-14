@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style/shouye.css" />
+    <script src="js/jquery-1.8.3.js" language="javascript" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            var curr = 0;
+                    $("#num a.trigger").each(function(i){
+                        $(this).click(function(){
+                        curr = i;
+                    $("#pol img").eq(i).fadeIn("fast").siblings("img").fadeOut("fast");
+                });
+                        var timer = setInterval(function(){  //设置定时器
+                            var go = (curr + 1) % 5;
+                            $("#num a.trigger").eq(go).click();
+                        },2000);
+                        $("#pol").hover(function(){ //hover在图片时，清除定时器
+                            clearInterval(timer);
+                        },function(){
+                            timer = setInterval(function(){
+                                var go = (curr + 1) % 5;
+                                $("#num a.trigger").eq(go).click();
+                            },2000);
+                        });
+            })
+        });
+    </script>
+    <style>
+        .demo{margin:60px auto;width:100px;float:left;position: absolute;}
+        .navbox{float:left;}
+       .demo  ul.nav{
+           width:100px;
+           padding:60px 0 60px 0;
+           background:url(p/source/shad2.png) no-repeat;
+       }
+       .demo  ul.nav li{
+           margin:5px 0 0 0;}
+       .demo ul.nav li a{
+           background-repeat: no-repeat;
+           background-image:url(p/source/border.png);
+           background-color:rgba(255,255,255,0.4);
+           color: #174867;
+           padding: 7px 15px 7px 15px; width: 100px;
+           display: block;
+           text-decoration: none;
+           -webkit-transition: all 0.3s ease-out;
+           -moz-transition: all 0.3s ease-out;
+           -o-transition: all 0.3s ease-out;
+           -webkit-box-shadow: 2px 2px 2px #BBBBBB;
+           -moz-box-shadow: 2px 2px 2px #BBBBBB;
+           -o-box-shadow: 2px 2px 2px #BBBBBB;
+           box-shadow: 2px 2px 2px #BBBBBB;
+           border-left: 0px solid #CCCCCC;
+           border-right: 1px solid #E3E3E3;
+           border-bottom: 1px solid #E3E3E3;
+           border-top: 1px solid #E3E3E3;
+       }
+       .demo ul.nav li a:hover{
+           background:#ebebeb url(p/source/border.png) no-repeat;
+           color:#67a5cd;
+           padding:7px 15px 7px 30px;
+       }
+    </style>
+</head>
+<body>
+<div id="head2">
+    <iframe height="550px" width="100%" src="smallPage/head2.html" scrolling="no" frameborder="0"></iframe>
+</div>
+<div class="demo">
+   <!-- <div class="navbox">
+        <ul class="nav">
+            <li><a href="#">XHTML</a></li>
+            <li><a href="#">HTML5</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">jQuery</a></li>
+            <li><a href="#">Ajax</a></li>
+            <li><a href="#">PHP</a></li>
+        </ul>
+    </div>-->
+</div>
+<div class="content">
+    <div id="headline">
+        <div class="title"><img src="p/source/headlines.jpg"/> </div>
+        <div class="text">
+          <div class="lunbo">
+                  <div id="po" class="po">
+                      <div id="pol">
+                          <img src="p/lunboimages/lunbo1.jpg" />
+                          <img src="p/lunboimages/lunbo2.jpg" />
+                          <img src="p/lunboimages/lunbo3.jpg" />
+                          <img src="p/lunboimages/lunbo4.jpg" />
+                          <img src="p/lunboimages/lunbo5.jpg" />
+                      </div>
+                      <div id="lunbobg"></div>
+                      <div id="num" class="num">
+                          <a class="trigger imgSelected" href="javascript:void(0)">1</a>
+                          <a class="trigger" href="javascript:void(0)">2</a>
+                          <a class="trigger" href="javascript:void(0)">3</a>
+                          <a class="trigger" href="javascript:void(0)">4</a>
+                          <a class="trigger" href="javascript:void(0)">5</a>
+                      </div>
+                  </div>
+          </div>
+            <div class="show">
+                <ul>
+                    <li>“2016年赴美、赴澳实习项目”校园经理火热招募</li>
+                    <li>“18岁的我长这样”奇集女生节颜值大赏有奖活动</li>
+                    <li>3.7奇集女生节私人订制心愿</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="club">
+        <div class="title"><img src="p/source/club.jpg"/> </div>
+            <ul>
+                <div class="club">
+                    <li>
+                        <figure class="pic">
+                            <a href="#"><img src="p/club/club1.png"/></a>
+                            <figcaption>
+                                <div class="text">
+                                    <p class="title">xxxx社</p>
+                                    <p class="address">江西师范大学</p>
+                                    <p class="number">现有人数：</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <h3 class="clubtitle"><a href="#">xxxxxx社</a></h3>
+                        <span class="follow"> <a href="#">关注</a></span>
+                    </li>
+                </div>
+                <div class="club">
+                    <li>
+                        <figure class="pic">
+                            <a href="#"><img src="p/club/club2.png"/></a>
+                            <figcaption>
+                                <div class="text">
+                                    <p class="title">xxxx社</p>
+                                    <p class="address">江西师范大学</p>
+                                    <p class="number">现有人数：</p>
+                                </div>
+                            </figcaption>
+                        </figure>
+                        <h3 class="clubtitle"><a href="#">xxxxxx社</a></h3>
+                        <span class="follow"> <a href="#">关注</a></span>
+                    </li>
+                </div>
+                <div class="club">
+                    <li><figure class="pic">
+                        <a href="#"><img src="p/club/club3.png"/></a>
+                        <figcaption>
+                            <div class="text">
+                                <p class="title">xxxx社</p>
+                                <p class="address">江西师范大学</p>
+                                <p class="number">现有人数：</p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                        <h3 class="clubtitle"><a href="#">xxxxxx社</a></h3>
+                        <span class="follow"> <a href="#">关注</a></span>
+                    </li>
+                </div>
+            </ul>
+        <div class="button">
+            <a href="Club.html">查看更多社团</a>
+        </div>
+    </div>
+    <div id="activity">
+        <div class="title"><img src="p/source/Activity.jpg"/> </div>
+        <div class="activity1">
+            <ul>
+                <li class="activity">
+                    <a href="#"><img src="p/activity/activity.jpg"/></a>
+                    <h3>大家一起来打羽毛球</h3>
+                    <p>社团：羽毛协会</p>
+                    <p>活动时间：2016年6月12日下午14:00</p></li>
+                <li class="activity">
+                    <a href="#"><img src="p/activity/activity2.jpg" /></a>
+                    <h3>大家一起来打羽毛球</h3>
+                    <p>社团：羽毛协会</p>
+                    <p>活动时间：2016年6月12日下午14:00</p></li>
+                <li class="activity">
+                    <a href="#"><img src="p/activity/activity3.jpg" /></a>
+                    <h3>大家一起来打羽毛球</h3>
+                    <p>社团：羽毛协会</p>
+                    <p>活动时间：2016年6月12日下午14:00</p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="lianxiwomen">
+    <iframe height="232px" width="100%" src="smallPage/lianxiwomen.html" scrolling="no" frameborder="0"></iframe>
+</div>
+</body>
+</html>

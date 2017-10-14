@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="js/jquery-1.8.3.js" language="javascript" type="text/javascript"></script>
+    <script src="js/lunbo.js" language="javascript" type="text/javascript"></script>
+
+<style>
+.lunbo{
+    width:500px;
+    height:330px;
+//    border: 1px solid #000;
+    margin:30px 20px 20px 20px;
+    background-color: white;
+}
+ #po {
+    width: 500px;
+    overflow: hidden;
+    height: 330px;
+//border: solid 1px #000000;
+    left: 0px;;
+    top: 0px;
+//position: relative;
+}
+#lunbobg{ 
+width:500px; 
+padding-top:1px; 
+background-color:yellow;
+height:30px;
+ left:30px; 
+ FONT-WEIGHT: bold; 
+ top:330px; 
+ position:absolute;
+}
+ #num {
+    width: 500px;
+    height: 25px;
+    position: absolute;
+    z-index: 2;
+    left: 300px;
+    top: 320px;
+}
+ #num a {
+   width:40px; 
+   font-size:14px;
+   margin-right:6px; 
+   display:inline; 
+   height:33px; 
+   line-height:33px; 
+   display:block;
+   float:left; 
+   text-align:center; 
+   color:#000;}
+
+.lunbo #num span.cut {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+#pol img {
+    width: 500px;
+    height: 330px;
+    float: left
+}
+</style>
+</head>
+
+<body>
+ <div class="lunbo">
+ 
+	<a id=prev class="prevBtn qq" href="javascript:void(0)"></a>
+
+	<a id=next class="nextBtn qq" href="javascript:void(0)"></a>
+                  <div id="po" class="po">
+                      <div id="pol">
+                          <img src="p/lunboimages/lunbo1.jpg" />
+                          <img src="p/lunboimages/lunbo2.jpg" />
+                          <img src="p/lunboimages/lunbo3.jpg" />
+                          <img src="p/lunboimages/lunbo4.jpg" />
+                          <img src="p/lunboimages/lunbo5.jpg" />
+                      </div>
+                      <div id="lunbobg"></div>
+                      <div id="num" class="num">
+                          <a class="trigger imgSelected" href="javascript:void(0)">1</a>
+                          <a class="trigger" href="javascript:void(0)">2</a>
+                          <a class="trigger" href="javascript:void(0)">3</a>
+                          <a class="trigger" href="javascript:void(0)">4</a>
+                          <a class="trigger" href="javascript:void(0)">5</a>
+                      </div>
+                  </div>
+          </div>
+</body>
+</html>

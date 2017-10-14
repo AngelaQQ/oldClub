@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>简单实用的jquery分页插件</title>
+<script src="../js/jquery-1.8.3.js"></script>
+
+<script src="../js/jquery.simplePagination.js"></script>
+<style>
+ul {
+	list-style: none;
+	font-size: 13px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 50%;
+	margin-top: -7px;
+}
+
+ul li {
+	float: left;
+	padding:0 10px;
+	border-left: 1px solid rgba(255,255,255,0.5);
+	line-height: 1;
+	height: 14px;
+}
+.pagecut a, .pagecut span {
+	float: left;
+	color: #666;
+	font-size:14px;
+	line-height:24px;
+	font-weight: normal;
+	text-align: center;
+	border: 1px solid #BBB;
+	min-width: 14px;
+	padding: 0 7px;
+	margin: 0 5px 0 0;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	background: #efefef; /* Old browsers */
+}
+
+.pagecut a:hover {
+	text-decoration: none;
+	background: #FCFCFC;
+}
+.pagecut .current {
+	background: #666;
+	color: #FFF;
+	border-color: #444;
+	box-shadow: 0 1px 0 rgba(255,255,255,1), 0 0 2px rgba(0, 0, 0, 0.3) inset;
+	cursor: default;
+}
+
+.pagecut .ellipse {
+	background: none;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	font-weight: bold;
+	cursor: default;
+}
+</style>
+</head>
+
+<body>
+
+  <p class="spacer">"light-theme"</p>
+
+  <div class="pagination-holder clearfix">
+
+    <div id="light-pagination" class="pagination"></div>
+
+  </div>
+  <script type="text/javascript">
+$('#light-pagination').pagination({
+	pages: 8,
+	cssStyle: 'pagecut',
+	displayedPages: 2,
+	edges: 1
+});
+</script>
+</body>
+
+</html>
